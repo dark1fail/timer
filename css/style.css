@@ -1,0 +1,31 @@
+body
+{
+    background-color: #6e26ab;
+    background-image: url(../image/bg.jpg);
+}
+
+button
+{
+    margin-bottom: 10px;
+    height: 58px;
+    width: 163.7416px;
+}
+
+.window
+{
+    background-color: #6e26ab;
+    height: 400px;
+    width: 332px;
+    margin:50px auto;
+}
+
+#buttons
+{
+    padding-top: 50px;
+}
+
+.timer
+{
+    color: #e745cf;
+    font-size: 132px;
+}
