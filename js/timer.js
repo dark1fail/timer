@@ -13,19 +13,19 @@ $("#save").click(function () {
 });
 
 
-// плюс 30 сек
+// плюс 1 минута
 $("#button-1").click(function () {
-    sec = Number(sec) + 30;
+    min = Number(min) + 1;
 
     output();
 });
 
 
-// минус 30 сек
+// минус 1 минута
 $("#button-4").click(function () {
-    sec = Number(sec) - 30;
-    if (sec < 0) {
-        sec = 0;
+    min = Number(min) - 1;
+    if (Number(min) <= 0) {
+        min = 0;
     }
 
     output();
@@ -34,10 +34,12 @@ $("#button-4").click(function () {
 
 // сбрасываем таймер
 $("#button-6").click(function () {
- min = 0;
- sec = 0;
+    min = 0;
+    sec = 0;
 
- output();
+    clearInterval(start);
+
+    output();
 });
 
 
@@ -80,7 +82,7 @@ function timer() {
 function output() {
     min = Number(min);
     sec = Number(sec);
-    if (Number(sec) >= 60) {
+    if (Number(sec) > 60) {
         min = Number(min) + Math.floor(Number(sec) / 60);
         sec = Number(sec) - Math.floor(Number(sec) / 60) * 60;
     }
