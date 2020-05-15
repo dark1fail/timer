@@ -24,7 +24,9 @@ $("#button-1").click(function () {
 // минус 1 минута
 $("#button-4").click(function () {
     min = Number(min) - 1;
-    if (Number(min) <= 0) {
+
+    if (Number(min) < 0) {
+        sec = 0;
         min = 0;
     }
 
