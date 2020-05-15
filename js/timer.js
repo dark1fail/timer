@@ -66,6 +66,7 @@ function timer() {
 
     if (sec <= 0 && min <= 0) {
         clearInterval(start);
+        alert("Finish!")
         return output();
     }
 
